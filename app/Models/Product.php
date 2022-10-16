@@ -17,11 +17,22 @@ class Product extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'code',
+        'product_name',
+        'product_code',
         'price',
-        'name',
-        'code',
-        'price',
+        'product_categorie',
+        'available_quantity',
+        'product_description',
+        'percentage_discount',
+        'image'
+    ];
+
+     /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'created_at' => 'datetime',
     ];
 }
